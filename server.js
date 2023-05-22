@@ -7,8 +7,9 @@ const port = 3000;
 app.use(bodyParser.json());
 
 app.post('/notification', (req, res) => {
-    console.log(req.body);
-    res.send('Registro recibido');
+      console.log('Request Headers:', req.headers);
+      console.log('Request Body:', req.body);
+      res.send('Registro recibido');
   });
 
 app.listen(port, () => {
